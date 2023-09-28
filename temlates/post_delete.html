@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="delete">
+   <h1 class="post__delete">Postni o'chirish</h1>
+   <form action="" method="post">{% csrf_token %}
+      <p><span class="post__about">"{{ post.title }}"</span> Postni o'chiraymi?</p>
+      <input type="submit" value="O'chirish" class="two__ochirish">
+   </form>
+</div>
+{%endblock content%}

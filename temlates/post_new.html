@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+
+
+{%block content%}
+ <div class="post_container">
+  <h1 class="new_post_title">Yangi post</h1>
+  <form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="saqlash" class="post__save">
+  </form>
+ </div>
+{%endblock content%}
+
+

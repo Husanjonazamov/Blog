@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+
+{%block content%}
+   <div class="tahrirlash__two">
+    <h1 class="post_tahrirlash__title">Postni Tahrirlash</h1>
+   <form action="" method="post">{% csrf_token %}
+     {{ form.as_p }}
+     <input type="submit" value="Yangilash" class="yangilash">
+   </form>
+   </div>
+{%endblock content%}

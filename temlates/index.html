@@ -1,0 +1,15 @@
+{% extends 'blog.html' %}
+
+{%block content%}
+<div class="container_blog">
+{% for post in post_list %}
+  <div class="posts">
+    {% comment %} <img src="{{ post.image.url }}"> {% endcomment %}
+    <h2><a href="{% url 'post_detail' post.pk %}" class="title">{{ post.title }}</a></h2>
+    <p class="desc">{{ post.desc | slice:":400" }}</p>
+  </div>
+{% endfor %}
+{%endblock content%}
+
+
+  

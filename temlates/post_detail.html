@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<div class="posts">
+    <h2><a href="{% url 'post_detail' post.pk %}" class="title">{{post.title}}</a></h2>
+    <p class="desc">{{post.desc}}</p>
+</div>
+  
+
+ <div class="two_container">
+    <ul class="min_container">
+        <li class="min_li">
+            <a href="{% url 'post_edit' post.pk %}" class="tahrirlash">Postni Tahrirlash</a>
+        </li>
+        <li class="min_li">
+            <a href="{% url 'post_delete' post.pk %}" class="ochirish">Postni o'chirish</a>
+        </li>
+    </ul>
+</div>
+{%endblock content%}
+
